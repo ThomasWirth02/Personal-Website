@@ -86,50 +86,38 @@ a{
     display: grid;
     width: 100%;
     height: 90vh;
-    grid-template-columns: 1fr 950px 1fr;
-    grid-template-rows: 0.73fr 1fr max-content;
-
+}
+.fixed-header{
+    position: fixed;
+    top: 48.6%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    width: 950px;
 }
 #thomas-wirth{
-    padding-top: 30%;
-    text-align: center;
     font-family: "UnifrakturCook", cursive;
     font-weight: 700;
     font-size: 120px;
-    margin-bottom: 0;
-    grid-column: 2;
-    grid-row: 1;
-    
 }
 
-#under-title{
-    display: grid;
+.fixed-underheader{
     text-align: right;
-    padding-right: 30px;
-    grid-row: 1.3rem 1fr;
-    grid-template-columns: 5.8fr 1fr;
-    grid-template-rows: 1rem 1fr;
+    position: fixed;
+    padding-top: 200px;
+    top: 48.6%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    width: 950px;
+    line-height: 0;
+}
+.fixed-underheader #uh-1{
+    padding-right: 110px;
+}
+.fixed-underheader #uh-2{
+    padding-right: 100px;
+}
 
-    grid-column: 2;
-    grid-row: 2;
-    animation: fade-out ease-out;
-    animation-timeline: view();
-    animation-range: exit -600px;
-}
-#au{
-    margin-top: 0;
-    grid-column: 2;
-    grid-row: 1;
-    text-align: left;
-    
-}
-#ger{
-    margin-top: 0;
-    grid-column: 2;
-    grid-row: 2;
-    text-align: left;
 
-}
 /* Static elements */
 .position{
     top: 48.6%;
@@ -137,8 +125,7 @@ a{
     transform: translateY(-50%);
     text-align: center;
     position: fixed;
-    grid-column: 3;
-    grid-row: 1;
+    
 }
 
 .position ul{
@@ -146,27 +133,65 @@ a{
 
 }
 
-/* About Me */
+/* Content */
 
-.about-me{
-    height: 1250px;
+/* About me */
+.content-about{
+    height: 1600px;
     display: grid;
     grid-template-columns: 1fr 950px 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 150px 14rem 1fr;
+
 }
 
-.about-me #header-1{
-    grid-row: 1;
-    grid-column: 2;
-    text-align: center;
+#about-me{
     font-family: "UnifrakturCook", cursive;
     font-weight: 700;
     font-size: 100px;
+    grid-column: 2;
+    text-align: center;
+    margin: 0;
+    
+}
+.content-about p{
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #292b2b;
+    font-size: 27px;
 }
 
-/* Keyframes */
-@keyframes fade-out{
-    to {opacity: 0;}
+#abme-1{
+    grid-row: 2;
+    grid-column: 2;
 }
+#abme-2{
+    grid-row: 2;
+    grid-column: 2;
+    padding-top: 1.8rem;
+}
+#abme-3{
+    grid-row: 2;
+    grid-column: 2;
+    padding-top: 3.6rem;
+}
+#abme-4{
+    grid-row: 2;
+    grid-column: 2;
+    padding-top: 5.4rem;
+}
+#abme-5{
+    grid-row: 2;
+    grid-column: 2;
+    padding-top: 7.2rem;
+}
+#abme-6{
+    grid-row: 2;
+    grid-column: 2;
+    padding-top: 9rem;
+}
+
+
+/* Keyframes */
+
 
 
