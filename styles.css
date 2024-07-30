@@ -136,11 +136,11 @@ a{
 /* Content */
 
 /* About me */
-.content-about{
+.content-container{
     height: 1600px;
     display: grid;
     grid-template-columns: 1fr 950px 1fr;
-    grid-template-rows: 150px 14rem 1fr;
+    grid-template-rows: 150px 14rem 5rem 20rem 1fr;
 
 }
 
@@ -153,7 +153,7 @@ a{
     margin: 0;
     
 }
-.content-about p{
+.content-container p{
     text-align: center;
     font-family: "Roboto Condensed", sans-serif;
     color: #292b2b;
@@ -188,6 +188,75 @@ a{
     grid-row: 2;
     grid-column: 2;
     padding-top: 9rem;
+}
+
+/* Education and Skills */
+#sk-edu{
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    font-size: 50px;
+    grid-column: 2;
+    text-align: center;
+    margin: 0;
+}
+
+.education-container{
+    grid-row: 4;
+    grid-column: 2;
+}
+
+
+#edu-info1{
+    grid-row: 4;
+    grid-column: 2;
+    
+}
+#edu-info2{
+    grid-row: 4;
+    grid-column: 2;
+    padding-top: 1.8rem;
+}
+#edu-info3{
+    grid-row: 4;
+    grid-column: 2;
+    padding-top: 3.6rem;
+}
+#edu-info4{
+    grid-row: 4;
+    grid-column: 2;
+    padding-top: 5.4rem;
+}
+#edu-info5{
+    grid-row: 4;
+    grid-column: 2;
+    padding-top: 7.2rem;
+}
+#edu-info6{
+    grid-row: 4;
+    grid-column: 2;
+    padding-top: 9rem;
+}
+#edu-info7{
+    grid-row: 4;
+    grid-column: 2;
+    padding-top: 10.8rem;
+}
+#edu-info8{
+    grid-row: 4;
+    grid-column: 2;
+    padding-top: 12.6rem;
+}
+#tum-logo{ 
+    position: relative;
+    opacity: 0.6;
+    grid-row: 4;
+    grid-column: 2 ;
+    width: 133px;
+    height: 70px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
 }
 
 
