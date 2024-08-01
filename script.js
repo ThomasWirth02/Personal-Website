@@ -11,16 +11,7 @@ window.addEventListener('scroll', () => {
     
     document.getElementById("thomas-wirth").style.opacity = opacity1;
     document.getElementById("uh-1").style.opacity = opacity1;
-    document.getElementById("uh-2").style.opacity = opacity1; 
-    
-    document.getElementById("about-me").style.opacity = opacity2;
-    document.getElementById("abme-1").style.opacity = opacity2;
-    document.getElementById("abme-2").style.opacity = opacity2;
-    document.getElementById("abme-3").style.opacity = opacity2;
-    document.getElementById("abme-4").style.opacity = opacity2;
-    document.getElementById("abme-5").style.opacity = opacity2;
-    
-    document.getElementById("sk-edu").style.opacity = opacity2;
+  
 
 });
 
