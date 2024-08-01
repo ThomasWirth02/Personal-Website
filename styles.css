@@ -8,7 +8,7 @@ body{
     background-color: #efefef;
     margin: 30px 50px;
     line-height: 1.4;
-
+    overflow-x: hidden;
 }
 img{
     max-width: 100%;
@@ -78,7 +78,24 @@ a{
 }
 
 #local-time{
-   text-align: center;
+   grid-column: 2;
+   margin: 0;
+    padding: 0;
+}
+#time-title{
+    text-align: center;
+    grid-column: 2;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+
+    
+
+}
+
+#acc-time{
+    text-align: center;
+    grid-column: 2;
 }
 
 /* Title Container */
@@ -98,23 +115,24 @@ a{
     font-family: "UnifrakturCook", cursive;
     font-weight: 700;
     font-size: 120px;
+    text-shadow: 
+    -4px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .fixed-underheader{
     text-align: right;
     position: fixed;
     padding-top: 200px;
-    top: 48.6%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);  
     width: 950px;
     line-height: 0;
 }
 .fixed-underheader #uh-1{
-    padding-right: 110px;
-}
-.fixed-underheader #uh-2{
-    padding-right: 100px;
+    padding-right: 60px;
+    font-size: 20px;
+    
 }
 
 
@@ -135,132 +153,195 @@ a{
 
 /* Content */
 
-/* About me */
-.content-container{
-    height: 1600px;
-    display: grid;
-    grid-template-columns: 1fr 950px 1fr;
-    grid-template-rows: 150px 14rem 5rem 20rem 1fr;
-
-}
-
-#about-me{
-    font-family: "UnifrakturCook", cursive;
-    font-weight: 700;
-    font-size: 100px;
-    grid-column: 2;
-    text-align: center;
-    margin: 0;
-    
-}
-.content-container p{
-    text-align: center;
-    font-family: "Roboto Condensed", sans-serif;
-    color: #292b2b;
-    font-size: 27px;
-}
-
-#abme-1{
-    grid-row: 2;
-    grid-column: 2;
-}
-#abme-2{
-    grid-row: 2;
-    grid-column: 2;
-    padding-top: 1.8rem;
-}
-#abme-3{
-    grid-row: 2;
-    grid-column: 2;
-    padding-top: 3.6rem;
-}
-#abme-4{
-    grid-row: 2;
-    grid-column: 2;
-    padding-top: 5.4rem;
-}
-#abme-5{
-    grid-row: 2;
-    grid-column: 2;
-    padding-top: 7.2rem;
-}
-#abme-6{
-    grid-row: 2;
-    grid-column: 2;
-    padding-top: 9rem;
-}
 
 /* Education and Skills */
-#sk-edu{
-    font-family: "UnifrakturCook", cursive;
-    font-weight: 700;
-    font-size: 50px;
+.content-container{
+    display: grid;
+    height: 750px;
+    width: 100%;
+    grid-template-columns: 1fr 600px 350px 350px 350px 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 1000px;
+    grid-gap: 50px;
+}
+
+#main-container {
+    grid-row: 1 / span 2;
     grid-column: 2;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: #acc3b8;
+    opacity: 0.8; 
+    scale: 1;
+    animation: fade-in ease-out forwards; 
+    animation-timeline: view();
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.4);
     text-align: center;
-    margin: 0;
-}
-
-.education-container{
-    grid-row: 4;
-    grid-column: 2;
-}
-
-
-#edu-info1{
-    grid-row: 4;
-    grid-column: 2;
     
 }
-#edu-info2{
-    grid-row: 4;
-    grid-column: 2;
-    padding-top: 1.8rem;
+
+/* Flip cards */
+
+
+.flip-cards{
+    display: grid;
+    height: 1600px;
+    grid-template-columns: 1fr 900px 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-#edu-info3{
-    grid-row: 4;
-    grid-column: 2;
-    padding-top: 3.6rem;
-}
-#edu-info4{
-    grid-row: 4;
-    grid-column: 2;
-    padding-top: 5.4rem;
-}
-#edu-info5{
-    grid-row: 4;
-    grid-column: 2;
-    padding-top: 7.2rem;
-}
-#edu-info6{
-    grid-row: 4;
-    grid-column: 2;
-    padding-top: 9rem;
-}
-#edu-info7{
-    grid-row: 4;
-    grid-column: 2;
-    padding-top: 10.8rem;
-}
-#edu-info8{
-    grid-row: 4;
-    grid-column: 2;
-    padding-top: 12.6rem;
-}
-#tum-logo{ 
+
+.flip-card{
+    margin-right: 20px;
     position: relative;
-    opacity: 0.6;
-    grid-row: 4;
-    grid-column: 2 ;
-    width: 133px;
-    height: 70px;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 900px;
+    aspect-ratio: 16/9;
+    perspective: 3200px;
+    transition: all 0.3s linear;
     
+
+}
+#fc-edu{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.front-side, 
+.back-side{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 4px 12px 40px 6px rgba(0,0,0,0.09);
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #292b2b;
+    transition: transform 1s ease-in-out;
+    backface-visibility: hidden;
 }
 
 
-/* Keyframes */
+.front-side{
+    background: whitesmoke;
+    transform: rotateX(0deg);
+}
+.back-side{
+    transform: rotateX(-180deg);
+    background: #B2FBA5;
+    
+}
+
+.flip-card:hover .front-side{
+    transform: rotateX(180deg);
+}
+.flip-card:hover .back-side{
+    transform: rotateX(0deg);
+}
+
+#card1{
+    grid-row: 1;
+    grid-column: 2;
+    
+}
+
+#card2{
+    grid-row: 1;
+    grid-column: 2;
+
+}
+#card3{
+    grid-row: 1;
+    grid-column: 2;
+
+}
+#card4{ 
+    grid-row: 1;
+    grid-column: 2;
+
+}
+#card5{
+    grid-row: 1;
+    grid-column: 2;
+
+}
+
+
+.hidden{
+    opacity: 0;
+    z-index: -1;
+}
+
+
+.move-left{
+    transform: translateX(-100%);
+    transition: transform 0.3s linear forwards, opacity 0.3s linear ;
+}
+.move-right{
+    transform: translateX(100%);
+    transition: transform 0.3s linear forwards, opacity 0.3s linear;
+
+}
+
+
+.button-74 {
+    background-color: #efefef;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+  }
+  
+  .button-74:hover {
+    background-color: w;
+  }
+  
+  .button-74:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+  .btn-container{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Optional: Ensure the container spans the width */
+    margin-top: 20px;
+  }
+  @media (min-width: 768px) {
+    .button-74 {
+      min-width: 120px;
+      padding: 0 25px;
+    }
+  }
+  
+@keyframes fade-in {
+    to { 
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes wobble{
+    
+}
 
 
 

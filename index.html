@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,6 +20,7 @@
                 </li>
                 <li id="local-time">
                     <p>HEILBRON, GERMANY</p>
+                    <p id="heilbron-time">Loading Heilbron Time...</p>
                 </li>
                 <li >
                     <nav class="nested-nav">
@@ -27,10 +29,10 @@
                                 <a href="#">RESUME</a>
                             </li>
                             <li>
-                                <a href="#">STUDIES</a>
+                                <a href="#">ABOUT ME</a>
                             </li>
                             <li>
-                                <a href="#">ABOUT ME</a>
+                                <a href="#">HOBBIES</a>
                             </li>   
                         </ul>
                     </nav>
@@ -67,60 +69,59 @@
                 </div>
                 <div class="fixed-underheader">
                     <p id="uh-1">Australian Student,</p>
-                    <p id="uh-2">Studying in Germany</p>
                 </div>
                 
         </section>
-        <section class="content-container">
-            <!--About Me-->
-            <h1 id="about-me">-ABOUT ME-</h1>
-            <p id="abme-1" class="scramble-text">
-                Hi! My name is Thomas. I am a student originally from Australia, currently studying
-            </p>
-            <p id="abme-2" class="scramble-text">     
-                in Germany. I have a deep passion for Computer Science, particularly in the
-            </p> 
-            <p id="abme-3" class="scramble-text">
-                development and implementation of projects. Seeing my work come to fruition is 
-            </p>
-            <p id="abme-4" class="scramble-text">
-                what drives me to pursue this career. I am hardworking and take great pride in 
-            </p>
-            <p id="abme-5" class="scramble-text">
-                spearheading projects, especially when I am deeply interested in the topic.
-            </p>
-            
-            <!-- Education -->
-             <h1 id="sk-edu">EDUCATION</h1>
-                <p id="edu-info1">
-                    I am currently studying information engineering at the Technische Universität München.
-                </p>
-                <p id="edu-info2">   
-                    This Bachelor focuses on the theoretical aspect of Computer Science with courses
-                </p>
-                <p id="edu-info3">    
-                    complementing the theoretical side through the application of the given theory (primarily
-                </p>
-                <p id="edu-info4">
-                    through the use of JAVA). In addition to the theoretical and practical courses we also 
-                </p>
-                <p id="edu-info5">
-                    have several courses which focus on the business side of developing and implementing a 
-                </p>
-                <p id="edu-info6">    
-                    digital system.  This combination has enabled me to learn the full lifecycle of an 
-                </p>
-                <p id="edu-info7">    
-                    information system, from the planning, development, implementation and then finally the
-                </p>
-                <p id="edu-info8">    
-                    maintenance involve with information system.
-                </p>
-
-                <img src="../Images/tum-logo-removebg-preview.png" id="tum-logo">
-
-                <!--  -->
+        
+        <section class="flip-cards">
+            <div class="flip-card" id="card1">
+                <div class="front-side">
+                    A
+                </div>
+                <div class="back-side">
+                    OMG TUM
+                </div>
+            </div>
+            <div class="flip-card hidden" id="card2">
+                <div class="front-side">
+                    B
+                </div>
+                <div class="back-side">
+                    OMG NOT TUM
+                </div>
+            </div>
+            <div class="flip-card hidden" id="card3">
+                <div class="front-side">
+                    C
+                </div>
+                <div class="back-side">
+                    OMG NOT TUM
+                </div>
+            </div>
+            <div class="flip-card hidden" id="card4">
+                <div class="front-side">
+                    D
+                </div>
+                <div class="back-side">
+                    OMG NOT TUM
+                </div>
+            </div>
+            <div class="flip-card hidden" id="card5">
+                <div class="front-side">
+                    E
+                </div>
+                <div class="back-side">
+                    OMG NOT TUM
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="button-74" role="button" id="btn-prev">&lt;</button>
+            </div>
+            <div class="btn-container">
+                <button class="button-74" role="button" id="btn-next">&gt;</button>
+            </div>
         </section>
+        
         
     </div>
 </body>
