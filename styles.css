@@ -187,12 +187,13 @@ a{
 
 .flip-cards{
     display: grid;
-    height: 1600px;
+    height: 600px;
     grid-template-columns: 1fr 900px 1fr;
     grid-template-rows: 1fr;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-bottom: 500px;
 }
 
 .flip-card{
@@ -218,9 +219,7 @@ a{
     border-radius: 15px;
     box-shadow: 4px 12px 40px 6px rgba(0,0,0,0.09);
     font-size: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
     color: #292b2b;
     transition: transform 1s ease-in-out;
     backface-visibility: hidden;
@@ -230,24 +229,50 @@ a{
 .front-side{
     background: whitesmoke;
     transform: rotateX(0deg);
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 .back-side{
     transform: rotateX(-180deg);
     background: #B2FBA5;
+    display: grid;
+    grid-template-rows: 1fr 75px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     
 }
 
-.flip-card:hover .front-side{
+.back-side p{
+    font-size: 25px;
+    padding: 25px;
+}
+
+
+
+.flip-card.is-flipped .front-side { 
     transform: rotateX(180deg);
-}
-.flip-card:hover .back-side{
+  }
+
+  
+  .flip-card.is-flipped .back-side {
     transform: rotateX(0deg);
-}
+  }
 
 #card1{
     grid-row: 1;
     grid-column: 2;
+    display: grid;
+    grid-row: 1fr 75px;
     
+}
+
+#tum-logo{
+    height: 100%;
+    width: 150px;
+    padding-left: 375px;
+    padding-bottom: 20px;
 }
 
 #card2{
@@ -291,10 +316,10 @@ a{
 
 .button-74 {
     background-color: #efefef;
-    border: 2px solid #422800;
+    border: 2px solid #292b2b;
     border-radius: 30px;
-    box-shadow: #422800 4px 4px 0 0;
-    color: #422800;
+    box-shadow: #292b2b 4px 4px 0 0;
+    color: #292b2b;
     cursor: pointer;
     display: inline-block;
     font-weight: 600;
@@ -306,9 +331,10 @@ a{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 50px;
     height: 50px;
     z-index: 10;
+    transition: opacity 0.3s linear;
+
   }
   
   .button-74:hover {
